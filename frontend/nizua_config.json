@@ -1,0 +1,15 @@
+{
+  "games": [
+    {
+      "id": 1,
+      "name": "Call of Duty: Black Ops 6",
+      "path": "https://www.xbox.com/en-US/play/launch/call-of-duty-black-ops-6---cross-gen-bundle/9PF528M6CRHQ",
+      "installed": true
+    }
+  ],
+  "settings": {
+    "auto_start": false,
+    "check_updates": true,
+    "theme": "dark"
+  }
+}

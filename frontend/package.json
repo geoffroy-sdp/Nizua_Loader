@@ -1,0 +1,62 @@
+{
+  "name": "nizua-loader",
+  "version": "1.0.0",
+  "description": "Nizua Loader - A game launcher application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.nizua.loader",
+    "productName": "Nizua Loader",
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!node_modules",
+      "!*.iss"
+    ],
+    "extraResources": [
+      {
+        "from": "dist/server.exe",
+        "to": "server.exe"
+      },
+      {
+        "from": "install_dependencies.bat",
+        "to": "install_dependencies.bat"
+      },
+      {
+        "from": "config.ini",
+        "to": "config.ini"
+      },
+      {
+        "from": "gamepad_control.py",
+        "to": "gamepad_control.py"
+      },
+      {
+        "from": "gamepad_injector.js",
+        "to": "gamepad_injector.js"
+      },
+      {
+        "from": "requirements.txt",
+        "to": "requirements.txt"
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    }
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "robotjs": "^0.6.0"
+  }
+}
